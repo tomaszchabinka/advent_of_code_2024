@@ -1,4 +1,5 @@
 mod day01;
+mod day02;
 
 enum Level {
     Easy,
@@ -6,11 +7,18 @@ enum Level {
 }
 
 fn main() {
-    let day = 1;
+    let day = 2;
     let level = Level::Hard;
 
-    match level {
-        Level::Easy => day01::historian_hysteria_easy(),
-        Level::Hard => day01::historian_hysteria_hard(),
+    match day {
+        1 => match level {
+            Level::Easy => day01::historian_hysteria_easy(),
+            Level::Hard => day01::historian_hysteria_hard(),
+        },
+        2 => match level {
+            Level::Easy => day02::rednosed_reports_easy(),
+            Level::Hard => day02::rednosed_reports_hard(),
+        },
+        _ => panic!("Unknown day!"),
     }
 }
