@@ -2,6 +2,7 @@ mod day01;
 mod day02;
 mod day03;
 mod day04;
+mod day05;
 
 enum Level {
     Easy,
@@ -9,7 +10,7 @@ enum Level {
 }
 
 fn main() {
-    let day = 4;
+    let day = 5;
     let level = Level::Hard;
 
     match day {
@@ -28,6 +29,10 @@ fn main() {
         4 => match level {
             Level::Easy => day04::ceres_search_easy(),
             Level::Hard => day04::ceres_search_hard(),
+        },
+        5 => match level {
+            Level::Easy => day05::print_queue_easy(),
+            Level::Hard => day05::print_queue_hard(),
         },
         _ => panic!("Unknown day!"),
     }
